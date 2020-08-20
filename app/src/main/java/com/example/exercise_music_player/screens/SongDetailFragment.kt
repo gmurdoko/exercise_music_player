@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import com.example.exercise_music_player.R
 import com.example.exercise_music_player.model.SongViewModel
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment_song_detail.*
+import kotlinx.android.synthetic.main.fragment_album_detail.*
 
 
 class SongDetailFragment : Fragment() {
@@ -26,7 +26,7 @@ class SongDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_song_detail, container, false)
+        return inflater.inflate(R.layout.fragment_album_detail, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

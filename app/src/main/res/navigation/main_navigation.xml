@@ -9,7 +9,7 @@
         android:id="@+id/songListFragment"
         android:name="com.example.exercise_music_player.screens.SongListFragment"
         android:label="fragment_song_list"
-        tools:layout="@layout/fragment_song_list" >
+        tools:layout="@layout/fragment_album_list" >
         <action
             android:id="@+id/action_songListFragment_to_addSongFragment"
             app:destination="@id/addSongFragment" />

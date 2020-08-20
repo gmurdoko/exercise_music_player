@@ -16,7 +16,7 @@ class SongRecycleAdapter(val songList: List<Song>, val getActivity: FragmentActi
 ): RecyclerView.Adapter<SongViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.song_item_layout, parent, false)
+            .inflate(R.layout.album_item_layout, parent, false)
         return SongViewHolder(view)
     }
 

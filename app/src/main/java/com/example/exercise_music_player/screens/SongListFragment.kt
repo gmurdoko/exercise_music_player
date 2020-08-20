@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.exercise_music_player.R
 import com.example.exercise_music_player.SongRecycleAdapter
 import com.example.exercise_music_player.model.SongViewModel
-import kotlinx.android.synthetic.main.fragment_song_list.*
+import kotlinx.android.synthetic.main.fragment_album_list.*
 
 
 class SongListFragment : Fragment() {
@@ -28,7 +28,7 @@ class SongListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_song_list, container, false)
+        return inflater.inflate(R.layout.fragment_album_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

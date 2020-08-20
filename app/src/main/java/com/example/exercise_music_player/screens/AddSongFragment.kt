@@ -10,7 +10,7 @@ import androidx.navigation.Navigation
 import com.example.exercise_music_player.R
 import com.example.exercise_music_player.model.Song
 import com.example.exercise_music_player.model.SongViewModel
-import kotlinx.android.synthetic.main.fragment_add_song.*
+import kotlinx.android.synthetic.main.fragment_add_album.*
 
 
 class AddSongFragment : Fragment() {
@@ -26,7 +26,7 @@ class AddSongFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_song, container, false)
+        return inflater.inflate(R.layout.fragment_add_album, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
