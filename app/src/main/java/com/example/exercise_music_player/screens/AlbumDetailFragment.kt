@@ -39,7 +39,7 @@ class AlbumDetailFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         val position = arguments?.getInt("position") ?: 0
 
-        albumViewModel.getAlbumById(position).observe(viewLifecycleOwner, Observer {
+        albumViewModel.getAlbumById(position+1).observe(viewLifecycleOwner, Observer {
             song_title_detail.text = it.artist
             bandName.text = it.album_title
             Picasso.get().load(it.image_url).into(image_song_detail)
@@ -58,7 +58,7 @@ class AlbumDetailFragment : Fragment(), View.OnClickListener {
         when(v) {
             button_add_song ->{
                 val position = arguments?.getInt("position") ?: 0
-                val bundle = bundleOf(Pair("posution", position))
+                val bundle = bundleOf(Pair("position", position))
                 navController.navigate(R.id.action_songDetailFragment_to_addSongFragment2, bundle)}
 
         }

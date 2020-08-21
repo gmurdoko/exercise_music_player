@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:ems="10"
-            android:hint="Artist"
+            android:hint="Duration"
             android:inputType="textPersonName"
             android:textColor="#DDDDDD"
             android:textSize="24sp"

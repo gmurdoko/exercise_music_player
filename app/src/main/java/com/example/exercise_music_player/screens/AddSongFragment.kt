@@ -40,10 +40,10 @@ class AddSongFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v){
             button_submit_song->{
-                val albumId = arguments?.getInt("albumId") ?: 1
+                val position = arguments?.getInt("position") ?: 1
                 val songTitle = input_song_title.text.toString()
                 val songDuration = input_song_duration.text.toString()
-                songViewModel.createNewSong(Song(song_name = songTitle, song_duration = songDuration, song_album_id = albumId ))
+                songViewModel.createNewSong(Song(song_name = songTitle, song_duration = songDuration, song_album_id = position ))
                 Toast.makeText(v?.context,"SUCCESS: Add Album", Toast.LENGTH_SHORT).show()
                 navController.navigate(R.id.action_addSongFragment2_pop)
             }
