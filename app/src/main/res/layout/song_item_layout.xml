@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/songTitleRecycleView"
+            android:id="@+id/song_title_layout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -33,7 +33,7 @@
 
 
         <ImageView
-            android:id="@+id/imageViewRecycleView"
+            android:id="@+id/song_play_layout"
             android:layout_width="48dp"
             android:layout_height="38dp"
             android:layout_marginTop="4dp"
@@ -43,7 +43,7 @@
             app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
 
         <TextView
-            android:id="@+id/songDurationRecycleView"
+            android:id="@+id/song_duration_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="36dp"

@@ -10,13 +10,14 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.exercise_music_player.R
+
 import com.example.exercise_music_player.model.AlbumViewModel
-import com.example.exercise_music_player.rooms.album.Song
-import kotlinx.android.synthetic.main.fragment_add_song.*
+import com.example.exercise_music_player.rooms.album.Album
+import kotlinx.android.synthetic.main.fragment_add_album.*
 
 
-class AddSongFragment : Fragment(), View.OnClickListener {
-    private val songViewModel by activityViewModels<AlbumViewModel>()
+class AddAlbumFragment : Fragment(), View.OnClickListener {
+    private val albumViewModel by activityViewModels<AlbumViewModel>()
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,23 +30,26 @@ class AddSongFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_song, container, false)
+        return inflater.inflate(R.layout.fragment_add_album, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         navController= Navigation.findNavController(view)
-        button_submit_song.setOnClickListener(this)
+        buttonSubmitSong.setOnClickListener(this)
+
+
     }
 
     override fun onClick(v: View?) {
         when(v){
-            button_submit_song->{
-                val albumId = arguments?.getInt("albumId") ?: 1
-                val songTitle = input_song_title.text.toString()
-                val songDuration = input_song_duration.text.toString()
-                songViewModel.createNewSong(Song(song_name = songTitle, song_duration = songDuration, song_album_id = albumId ))
+            buttonSubmitSong->{
+                val albumTitle = input_album_title.text.toString()
+                val artistName = input_artist_name.text.toString()
+                val albumImage = input_image_url.text.toString()
+                albumViewModel.createNewAlbum(Album(album_title = albumTitle, artist = artistName, image_url = albumImage ))
                 Toast.makeText(v?.context,"SUCCESS: Add Album", Toast.LENGTH_SHORT).show()
-                navController.navigate(R.id.action_addSongFragment2_pop)
+                navController.navigate(R.id.action_addSongFragment_pop)
             }
 
         }

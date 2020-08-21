@@ -4,57 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
+    android:background="#3C3C3C"
     android:layout_height="match_parent"
-    android:background="#f5f5f5"
-    tools:context=".screens.SongDetailFragment">
+    tools:context=".screens.AlbumDetailFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_add_song"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
-        android:layout_height="400dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="#4f4f4f"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04000002">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listSong_recycle_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bandName" />
 
         <ImageView
             android:id="@+id/image_song_detail"
-            android:layout_width="240dp"
-            android:layout_height="240dp"
+            android:layout_width="210dp"
+            android:layout_height="174dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.17000002"
+            app:layout_constraintVertical_bias="0.04000002"
             tools:src="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/title_song_detail"
+            android:id="@+id/song_title_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Album"
-            android:textColor="#fafafa"
-            android:textSize="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_song_detail"
-            app:layout_constraintVertical_bias="0.17000002" />
-
+            app:layout_constraintTop_toBottomOf="@+id/image_song_detail" />
         <TextView
-            android:id="@+id/artist_song_detail"
+            android:id="@+id/bandName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Artist"
-            android:textColor="#fafafa"
-            android:textSize="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="16dp"
+            android:text="Band Name"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_song_detail" />
+            app:layout_constraintTop_toBottomOf="@+id/song_title_detail" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

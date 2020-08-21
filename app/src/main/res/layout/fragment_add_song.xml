@@ -2,10 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout2"
+    android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f5f5"
     tools:context=".screens.AddSongFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +22,7 @@
 
 
         <EditText
-            android:id="@+id/input_album_title"
+            android:id="@+id/input_song_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -38,7 +37,7 @@
 
 
         <EditText
-            android:id="@+id/input_artist_name"
+            android:id="@+id/input_song_duration"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -49,32 +48,17 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_album_title" />
+            app:layout_constraintTop_toBottomOf="@+id/input_song_title" />
 
 
-        <EditText
-            android:id="@+id/input_image_url"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:ems="10"
-            android:hint="Image URL"
-            android:inputType="textPersonName"
-            android:textColor="#DDDDDD"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_artist_name" />
         <Button
-            android:id="@+id/buttonSubmitSong"
+            android:id="@+id/button_submit_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Submit"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/input_image_url" />
+            app:layout_constraintTop_toBottomOf="@id/input_song_duration" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
